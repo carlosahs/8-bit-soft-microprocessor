@@ -1,0 +1,85 @@
+Info: Start Nativelink Simulation process
+
+========= EDA Simulation Settings =====================
+
+Sim Mode              :  Gate
+Family                :  max10
+Quartus root          :  c:/intelfpga_lite/18.1/quartus/bin64/
+Quartus sim root      :  c:/intelfpga_lite/18.1/quartus/eda/sim_lib
+Simulation Tool       :  modelsim-altera
+Simulation Language   :  vhdl
+Version               :  93
+Simulation Mode       :  GUI
+Sim Output File       :  Top.vho
+Sim SDF file          :  Top__vhdl.sdo
+Sim dir               :  simulation\modelsim
+
+=======================================================
+
+Info: Starting NativeLink simulation with ModelSim-Altera software
+Sourced NativeLink script c:/intelfpga_lite/18.1/quartus/common/tcl/internal/nativelink/modelsim.tcl
+Probing transcript
+ModelSim-Altera Info: # Reading C:/intelFPGA_lite/18.1/modelsim_ase/tcl/vsim/pref.tcl
+ModelSim-Altera Info: # do Top_run_msim_gate_vhdl.do
+ModelSim-Altera Info: # if {[file exists gate_work]} {
+ModelSim-Altera Info: # 	vdel -lib gate_work -all
+ModelSim-Altera Info: # }
+ModelSim-Altera Info: # vlib gate_work
+ModelSim-Altera Info: # vmap work gate_work
+ModelSim-Altera Info: # Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
+ModelSim-Altera Info: # vmap work gate_work 
+ModelSim-Altera Info: # Copying C:/intelFPGA_lite/18.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+ModelSim-Altera Info: # Modifying modelsim.ini
+ModelSim-Altera Info: # 
+ModelSim-Altera Info: # vcom -93 -work work {Top.vho}
+ModelSim-Altera Info: # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+ModelSim-Altera Info: # Start time: 10:45:08 on Mar 10,2021
+ModelSim-Altera Info: # vcom -reportprogress 300 -93 -work work Top.vho 
+ModelSim-Altera Info: # -- Loading package STANDARD
+ModelSim-Altera Info: # init_dbinfo() DATABASE ERROR: (sqlite3_open D:/Tec 21/3_4th_semester_Feb-Jun_2021_Online/1st Period/Diseño con lógica programable/15_Final_Challenge/Prueba final/Top/simulation/modelsim/gate_work/_lib.qdb): unable to open database file
+ModelSim-Altera Info: # mtilibWrite(): INTERNAL ERROR: Unexpected null object encountered
+ModelSim-Altera Error: # ** Fatal: (vcom-9) Problem while writing token file "D:/Tec 21/3_4th_semester_Feb-Jun_2021_Online/1st Period/Diseño con lógica programable/15_Final_Challenge/Prueba final/Top/simulation/modelsim/gate_work/_temp/vcomrzxmv0".
+ModelSim-Altera Info: # El sistema no puede encontrar la ruta especificada. (GetLastError() = 3)
+ModelSim-Altera Error: # ** Error: Top.vho(29): VHDL Compiler exiting
+ModelSim-Altera Info: # End time: 10:45:08 on Mar 10,2021, Elapsed time: 0:00:00
+ModelSim-Altera Info: # Errors: 2, Warnings: 0
+ModelSim-Altera Error: # ** Error: C:/intelFPGA_lite/18.1/modelsim_ase/win32aloem/vcom failed.
+ModelSim-Altera Info: # Error in macro ./Top_run_msim_gate_vhdl.do line 8
+ModelSim-Altera Info: # C:/intelFPGA_lite/18.1/modelsim_ase/win32aloem/vcom failed.
+ModelSim-Altera Info: #     while executing
+ModelSim-Altera Info: # "vcom -93 -work work {Top.vho}"
+Error: Errors encountered while running modelsim do file
+Error: NativeLink simulation flow was NOT successful
+
+
+
+================The following additional information is provided to help identify the cause of error while running nativelink scripts=================
+Nativelink TCL script failed with errorCode:  1
+Nativelink TCL script failed with errorInfo:  1
+    (procedure "launch_sim" line 1)
+    invoked from within
+"launch_sim launch_args_hash"
+    ("eval" body line 1)
+    invoked from within
+"eval launch_sim launch_args_hash"
+    invoked from within
+"if [ info exists ::errorCode ] {
+                set savedCode $::errorCode
+                set savedInfo $::errorInfo
+                error $result $..."
+    invoked from within
+"if [catch {eval launch_sim launch_args_hash} result ] {
+            set status 1
+            if [ info exists ::errorCode ] {
+                set save..."
+    (procedure "run_sim" line 74)
+    invoked from within
+"run_sim run_sim_args_hash"
+    invoked from within
+"if [ info exists ::errorCode ] {
+            set savedCode $::errorCode
+            set savedInfo $::errorInfo
+            error "$result" $savedInfo ..."
+    (procedure "run_eda_simulation_tool" line 334)
+    invoked from within
+"run_eda_simulation_tool eda_opts_hash"
